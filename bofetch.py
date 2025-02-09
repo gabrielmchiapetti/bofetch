@@ -5,16 +5,21 @@ import os
 from os import system as sy
 import datetime
 import platform
+import time
 
 try:
 	import psutil
 except Exception:
+        print("Downloading dependencies (psutil)...")
+        time.sleep(1.2)
 	sy("pip3 install psutil")
 	import psutil
 
 try:
 	import distro
 except Exception:
+	print("Downloading dependecies (distro)...")
+        time.sleep(1.2)
 	sy("pip3 install distro")
 	import distro
 
